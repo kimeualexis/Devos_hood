@@ -1,0 +1,21 @@
+{% extends 'quiz/base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %}<title>New Question</title>{% endblock %}
+
+{% block body %}
+<div class="content-section">
+<form method="POST">
+    {% csrf_token %}
+    <fieldset class="form-group">
+        <legend class="border-bottom mb-4">New Question</legend>
+        {{ form|crispy }}
+    </fieldset>
+    <div class="form-group">
+        <button type="submit" class="btn btn-outline-info">Submit</button>
+        <button type="reset" class="btn btn-outline-danger">Cancel</button>
+    </div>
+</form>
+
+</div>
+{% endblock %}

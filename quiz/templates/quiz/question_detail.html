@@ -1,0 +1,50 @@
+{% extends 'quiz/base.html' %}
+
+{% block title %}<title>{{ question.pk }}</title>{% endblock %}
+
+{% block body %}
+        <article class="media content-section">
+        <img class="rounded-circle article-img" src="{{ object.author.profile.image.url }}">
+          <div class="media-body">
+            <div class="article-metadata">
+              <a class="mr-2" href="{% url 'quiz:user-questions' object.author.username %}">{{ object.author }}</a>
+              <small class="text-muted">{{ object.created|date:"F d, Y" }}</small>
+                {% if object.author == user %}
+                    <div class="">
+                    <a class="btn btn-secondary btn-sn mt-1 mb-1" href="{% url 'quiz:question-update' object.id %}">Update</a>
+                    <a class="btn btn-danger btn-sn mt-1 mb-1" href="{% url 'quiz:comment-delete' object.id %}">Delete</a>
+                    </div>
+                {% endif %}
+            </div>
+            <h2 class="article-title">{{ object.title }}</h2>
+            <p class="article-content">{{ object.content }}</p>
+
+
+          {% if object.comment_set %}
+              <div class="article-metadata">
+              <h5 class="text-secondary text-outline-info">Comments: {{ object.comment_set.count }}</h5>
+          </div>
+              {% for i in object.comment_set.all %}
+                  <p>{{ i.comment }} - <a class="mr-2" href="">{{ i.author }}</a></p>
+
+                  {% if object.author == user %}
+                    <div class="">
+                    <a class="btn btn-secondary btn-sn mt-1 mb-1" href="{% url 'quiz:comment-update' object.id %}">Update</a>
+                    <a class="btn btn-danger btn-sn mt-1 mb-1" href="{% url 'quiz:comment-delete' object.id %}">Delete</a>
+                    </div>
+                {% endif %}
+
+              {% endfor %}
+              <hr>
+          {% endif %}
+
+          <div>
+            <a class="btn btn-outline-primary btn-sn mt-1 mb-1" href="{% url 'quiz:question-comment' object.id %}">Comment</a>
+        </div>
+          </div>
+
+
+        </article>
+
+{% endblock %}
+
