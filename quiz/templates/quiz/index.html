@@ -1,6 +1,6 @@
 {% extends 'quiz/base.html' %}
 
-{% block title %}<title>Devox</title>{% endblock %}
+{% block title %}<title>Devs Hood</title>{% endblock %}
 
 {% block body %}
 {% if questions %}
@@ -44,7 +44,9 @@
         {% endif %}
 
     {% else %}
-    <h3>No Questions Yet.</h3>
+    <div class="content-section">
+    <h3 class="text-center text-primary">No Questions Yet.</h3>
+    </div>
 {% endif %}
 
 {% endblock %}

@@ -9,7 +9,8 @@ app_name = 'quiz'
 
 
 urlpatterns = [
-    path('', QuestionListView.as_view(), name='quiz-index'),
+    path('', views.index, name='devs-home'),
+    path('home/', QuestionListView.as_view(), name='quiz-index'),
     path('user/<str:username>/', UserQuestionListView.as_view(), name='user-questions'),
     path('<int:pk>/', QuestionDetailView.as_view(), name='question-detail'),
     path('create_new/', QuestionCreateView.as_view(), name='question-create'),

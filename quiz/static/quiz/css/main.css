@@ -36,6 +36,12 @@ ul {
   margin-bottom: 20px;
 }
 
+.card {
+  border-radius: 3px;
+  margin: 20px;
+  background: #ffffff;
+}
+
 .article-title {
   color: #444444;
 }

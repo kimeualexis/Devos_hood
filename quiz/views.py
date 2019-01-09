@@ -4,11 +4,9 @@ from django.views.generic import ListView, DetailView, CreateView, UpdateView, D
 from django.contrib.auth.models import User
 from .models import Question, Comment
 
-"""
+
 def index(request):
-    posts = Post.objects.all()
-    return render(request, 'blog/index.html', {'posts': posts})
-    """
+    return render(request, 'quiz/home.html')
 
 
 class QuestionListView(ListView):
@@ -91,7 +89,6 @@ class CommentCreateView(CreateView):
         question = get_object_or_404(Question, pk=self.kwargs.get('pk'))
         form.instance.author = self.request.user
         form.instance.question = question
-        # form.instance.post = self.request.post
         return super(CommentCreateView, self).form_valid(form)
 
 

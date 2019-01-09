@@ -10,7 +10,7 @@
         <img class="rounded-circle article-img" src="{{ quiz.author.profile.image.url }}">
           <div class="media-body">
             <div class="article-metadata">
-              <a class="mr-2" href="{% url 'quiz:user-questions' quiz.author.username %}">{{ quiz.author }}</a>
+              <a class="mr-2" href="{% url 'user-profile' %}">{{ quiz.author }}</a>
               <small class="text-muted">{{ quiz.created|date:"F d, Y" }}</small>
             </div>
             <h2><a class="article-title" href="{% url 'quiz:question-detail' quiz.id %}">{{ quiz.title }}</a></h2>
