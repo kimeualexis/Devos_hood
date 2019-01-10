@@ -2,14 +2,18 @@ from django.shortcuts import render, get_object_or_404
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from django.contrib.auth.models import User
-from .models import Question, Comment
+from .models import Question, Comment, Quote
+from .forms import CommentForm
 
 
-def index(request):
-    return render(request, 'quiz/home.html')
+class QuoteListView(ListView):
+    model = Quote
+    template_name = 'quiz/home.html'
+    context_object_name = 'quotes'
+    ordering = ['-author']
 
 
-class QuestionListView(ListView):
+class QuestionListView(LoginRequiredMixin, ListView):
     model = Question
     template_name = 'quiz/index.html'
     context_object_name = 'questions'
@@ -79,17 +83,30 @@ class CommentListView(ListView):
 class CommentCreateView(CreateView):
     model = Comment
     fields = ['comment', 'image']
-
-    """
-    def get_success_url(self):
-        return reverse('blog:post-detail')
-        """
+    template_name = 'quiz/question_detail.html'
 
     def form_valid(self, form, **kwargs):
         question = get_object_or_404(Question, pk=self.kwargs.get('pk'))
         form.instance.author = self.request.user
         form.instance.question = question
         return super(CommentCreateView, self).form_valid(form)
+
+
+"""
+def comment(request, quiz_id):
+    form = CommentForm(request.POST or None, request.FILES or None)
+    quiz = get_object_or_404(Question, pk=quiz_id)
+    if form.is_valid():
+        comm = form.save(commit=False)
+        comm.author = request.user
+        comm.image = request.FILES['image']
+        comm.question = quiz
+        comm.save()
+        return render(request, 'quiz/question_detail.html', {'quiz': quiz})
+    context = {'quiz': quiz,
+               'form': form}
+    return render(request, 'quiz/question_detail.html', context)
+    """
 
 
 class CommentUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):

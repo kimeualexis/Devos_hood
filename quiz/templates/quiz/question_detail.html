@@ -1,6 +1,7 @@
 {% extends 'quiz/base.html' %}
+{% load crispy_forms_tags %}
 
-{% block title %}<title>{{ question.pk }}</title>{% endblock %}
+{% block title %}<title>Question: {{ question.pk }}</title>{% endblock %}
 
 {% block body %}
     <div class="content-section">
@@ -48,10 +49,32 @@
           {% endif %}
 
           <div>
-            <a class="btn btn-outline-primary btn-sn mt-1 mb-1" style="margin: 5px;" href="{% url 'quiz:question-comment' object.id %}">Comment</a>
-        </div>
+           <!-- <a class="btn btn-outline-primary btn-sn mt-1 mb-1" style="margin: 5px;" href="{% url 'quiz:question-comment' object.id %}">Comment</a>-->
+          </div>
           </div>
      </article>
+
+
+
+
+    <!-- Trial: Stack Overflow-->
+    <form method="POST" action="" enctype="multipart/form-data">
+    {% csrf_token %}
+    <fieldset class="form-group">
+        <legend class="border-bottom mb-4">Comment</legend>
+        {{ form|crispy }}
+    </fieldset>
+    <div class="form-group">
+        <button type="submit" class="btn btn-outline-info">Submit</button>
+        <button type="reset" class="btn btn-outline-danger">Cancel</button>
+    </div>
+</form>
+
+
+
+
+
+
     </div>
 {% endblock %}
 

@@ -13,7 +13,7 @@
               <a class="mr-2" href="{% url 'user-profile' %}">{{ quiz.author }}</a>
               <small class="text-muted">{{ quiz.created|date:"F d, Y" }}</small>
             </div>
-            <h2><a class="article-title" href="{% url 'quiz:question-detail' quiz.id %}">{{ quiz.title }}</a></h2>
+            <h2><a class="article-title" href="{% url 'quiz:question-detail' quiz.id %}">{{ quiz.pk }}. {{ quiz.title }}</a></h2>
             <p class="article-content">{{ quiz.content }}</p>
           </div>
         </article>
@@ -40,7 +40,9 @@
         {% endif %}
 
     {% else %}
-    <h3>No Questions Yet.</h3>
+    <div class="alert alert-info">
+No Questions Yet
+</div>
 {% endif %}
 
 {% endblock %}

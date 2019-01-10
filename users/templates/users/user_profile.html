@@ -30,7 +30,7 @@
    {% if questions %}
        <div class="col-sm-9">
     {% for quiz in questions %}
-    <h2><a class="article-title" href="{% url 'quiz:question-detail' quiz.id %}">{{ quiz.title }}</a></h2>
+    <h2><a class="article-title" href="{% url 'quiz:question-detail' quiz.id %}">{{ quiz.pk }}. {{ quiz.title }}</a></h2>
         {% if quiz.image %}
 
                   <a href="{% url 'quiz:question-detail' quiz.id %}">
@@ -41,8 +41,9 @@
        {% endfor %}
        </div>
        {% else %}
-    <h3 class="text-center outline-primary" style="padding-top: 50px;">You've Not Asked Any Questions Yet.</h3>
-   {% endif %}
+<div class="alert alert-info">
+You've not asked any questions yet.
+</div>   {% endif %}
 </div>
 </div>
 {% endblock %}

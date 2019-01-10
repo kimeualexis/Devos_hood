@@ -4,16 +4,20 @@
 
 {% block body %}
     <article class="media content-section">
-    <div class="media-content">
-        <div>
-        <h3 class="text-center text-primary">Developers Hood</h3>
+
+    <div class="media-body">
+     <h3 class="text-center text-primary">Developers Hood</h3>
             <hr>
-    </div>
-    <p class="text-center">Yet, the challenges our kids will face will be much different than those of our generation. Most of what a typical student learns in school today will no longer be relevant by the time they graduate from college. A study at the University of Oxford found that 47 percent of today’s jobs will be eliminated over the next 20 years.
 
-Over the next few decades, much of what we “know” about the world will no longer be true. The computers of the future will not be digital. Software code itself is disappearing, or at least becoming far less relevant. Many of what are considered good jobs today will be either automated or devalued. We need to rethink how we prepare our kids for the world to come.</p>
-
+        {% if quotes %}
+            {% for quote in quotes %}
+    <p class="text-center">{{ quote.content }}</p>
+                <p align="right"> <small class="text-muted" align="right">{{ quote.author }}</small></p>
+                <hr>
+        {% endfor %}
+        {% endif %}
     </div>
+
     </article>
 {% endblock %}
 

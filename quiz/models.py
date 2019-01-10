@@ -30,3 +30,11 @@ class Comment(models.Model):
 
     def get_absolute_url(self):
         return reverse('quiz:question-detail', kwargs={'pk': self.question.pk})
+
+
+class Quote(models.Model):
+    author = models.CharField(max_length=30)
+    content = models.TextField()
+
+    def __str__(self):
+        return self.author
