@@ -4,6 +4,7 @@
 
 {% block body %}
 {% if questions %}
+    <div class="alert alert-info"><h5 class="text text-center">Questions:</h5></div>
     {% for quiz in questions %}
         <article class="media content-section">
         <img class="rounded-circle article-img" src="{{ quiz.author.profile.image.url }}">
@@ -12,7 +13,7 @@
               <a class="mr-2" href="{% url 'quiz:user-questions' quiz.author.username %}">{{ quiz.author }}</a>
               <small class="text-muted">{{ quiz.created|date:"F d, Y" }}</small>
             </div>
-            <h2><a class="article-title" href="{% url 'quiz:question-detail' quiz.id %}">{{ quiz.pk }}. {{ quiz.title }}</a></h2>
+            <h5><a class="article-title" href="{% url 'quiz:question-detail' quiz.id %}">{{ quiz.pk }}. {{ quiz.title }}</a></h5>
               {% if quiz.image %}
 
                   <a href="{% url 'quiz:question-detail' quiz.id %}">
@@ -44,9 +45,7 @@
         {% endif %}
 
     {% else %}
-    <div class="alert alert-info">
-No Questions Yet.
-</div>
+ <div class="alert alert-info"><h4 class="text text-center">No Questions:</h4></div>
 {% endif %}
 
 {% endblock %}

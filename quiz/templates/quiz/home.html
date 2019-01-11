@@ -1,23 +1,9 @@
 {% extends 'quiz/base.html' %}
+{%  load static %}
 
 {% block title %}<title>Devox</title>{% endblock %}
-
 {% block body %}
-    <article class="media content-section">
 
-    <div class="media-body">
-     <h3 class="text-center text-primary">Developers Hood</h3>
-            <hr>
-
-        {% if quotes %}
-            {% for quote in quotes %}
-    <p class="text-center">{{ quote.content }}</p>
-                <p align="right"> <small class="text-muted" align="right">{{ quote.author }}</small></p>
-                <hr>
-        {% endfor %}
-        {% endif %}
-    </div>
-
-    </article>
 {% endblock %}
+
 

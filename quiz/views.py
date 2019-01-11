@@ -1,9 +1,9 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from django.contrib.auth.models import User
 from .models import Question, Comment, Quote
-from .forms import CommentForm
+from .forms import CommentForm, QuestionForm
 
 
 class QuoteListView(ListView):
@@ -91,22 +91,41 @@ class CommentCreateView(CreateView):
         form.instance.question = question
         return super(CommentCreateView, self).form_valid(form)
 
-
 """
-def comment(request, quiz_id):
+def detail(request, quiz_id):
+    quiz = get_object_or_404(Question, pk=quiz_id)
+    return render(request, 'quiz/question_detail.html', {'quiz': quiz})
+    """
+
+
+def create_quiz(request):
+    form = QuestionForm(request.POST or None, request.FILES or None)
+    if form.is_valid():
+        question = form.save(commit=False)
+        question.author = request.user
+        question.image = request.FILES['image']
+        question.save()
+    return render(request, 'quiz/question_form.html', {'form': form})
+
+
+def detail(request, quiz_id):
     form = CommentForm(request.POST or None, request.FILES or None)
     quiz = get_object_or_404(Question, pk=quiz_id)
     if form.is_valid():
         comm = form.save(commit=False)
         comm.author = request.user
-        comm.image = request.FILES['image']
+        # comm.image = request.FILES['image']
         comm.question = quiz
         comm.save()
-        return render(request, 'quiz/question_detail.html', {'quiz': quiz})
     context = {'quiz': quiz,
                'form': form}
     return render(request, 'quiz/question_detail.html', context)
-    """
+
+
+def delete(request, quiz_id):
+    quiz = get_object_or_404(Question, pk=quiz_id)
+    quiz.delete()
+    return redirect('quiz:quiz-index')
 
 
 class CommentUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):

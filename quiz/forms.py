@@ -1,8 +1,14 @@
 from django import forms
-from .models import Comment
+from .models import Comment, Question
 
 
 class CommentForm(forms.ModelForm):
     class Meta:
         model = Comment
-        fields = '__all__'
+        fields = ['comment']
+
+
+class QuestionForm(forms.ModelForm):
+    class Meta:
+        model = Question
+        fields = ['title', 'content', 'image']

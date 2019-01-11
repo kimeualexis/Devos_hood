@@ -4,9 +4,8 @@
 {% block title %}<title>Log in</title>{% endblock %}
 
 {% block body %}
-<div class="container">
-<div class="col-md-6">
-<div class="content-section">
+<center>
+<div class="col-sm-4 content-section">
 <form method="POST">
     {% csrf_token %}
     <fieldset class="form-group">
@@ -22,6 +21,5 @@
     <small class="text-muted">Don't have an account? <a class="ml-2" href="{% url 'register' %}">Register</a></small>
 </div>
 </div>
-</div>
-</div>
+</center>
 {% endblock %}

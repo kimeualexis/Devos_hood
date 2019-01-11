@@ -21,7 +21,7 @@ class Question(models.Model):
 
 class Comment(models.Model):
     comment = models.TextField()
-    image = models.ImageField(blank=True, null=True)
+    # image = models.ImageField(blank=True)
     author = models.ForeignKey(User, on_delete=models.CASCADE)
     question = models.ForeignKey(Question, on_delete=models.CASCADE)
 
