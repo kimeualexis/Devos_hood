@@ -3,6 +3,27 @@
   <component name="ChangeListManager">
     <list default="true" id="12c0017b-e62d-4586-a5ef-f66fdf111831" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/devenv/lib/python3.6/site-packages/whitenoise-4.1.2.dist-info/INSTALLER" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/devenv/lib/python3.6/site-packages/whitenoise-4.1.2.dist-info/METADATA" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/devenv/lib/python3.6/site-packages/whitenoise-4.1.2.dist-info/RECORD" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/devenv/lib/python3.6/site-packages/whitenoise-4.1.2.dist-info/WHEEL" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/devenv/lib/python3.6/site-packages/whitenoise-4.1.2.dist-info/top_level.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/devenv/lib/python3.6/site-packages/whitenoise/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/devenv/lib/python3.6/site-packages/whitenoise/base.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/devenv/lib/python3.6/site-packages/whitenoise/compress.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/devenv/lib/python3.6/site-packages/whitenoise/django.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/devenv/lib/python3.6/site-packages/whitenoise/httpstatus_backport.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/devenv/lib/python3.6/site-packages/whitenoise/media_types.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/devenv/lib/python3.6/site-packages/whitenoise/middleware.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/devenv/lib/python3.6/site-packages/whitenoise/responders.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/devenv/lib/python3.6/site-packages/whitenoise/runserver_nostatic/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/devenv/lib/python3.6/site-packages/whitenoise/runserver_nostatic/management/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/devenv/lib/python3.6/site-packages/whitenoise/runserver_nostatic/management/commands/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/devenv/lib/python3.6/site-packages/whitenoise/runserver_nostatic/management/commands/runserver.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/devenv/lib/python3.6/site-packages/whitenoise/scantree.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/devenv/lib/python3.6/site-packages/whitenoise/storage.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/devenv/lib/python3.6/site-packages/whitenoise/string_utils.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/devs_circle/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/devs_circle/settings.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -78,8 +99,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/devs_circle/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="153" lean-forward="true" selection-start-line="153" selection-end-line="153" />
+            <state relative-caret-position="97">
+              <caret line="51" column="4" selection-start-line="51" selection-start-column="4" selection-end-line="51" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -328,12 +349,12 @@
       <workItem from="1547191913712" duration="1902000" />
       <workItem from="1547207344151" duration="620000" />
       <workItem from="1547222480754" duration="15338000" />
-      <workItem from="1547283180514" duration="4638000" />
+      <workItem from="1547283180514" duration="4936000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="68198000" />
+    <option name="totallyTimeSpent" value="68496000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="28" width="1366" height="740" extended-state="6" />
@@ -679,8 +700,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/devs_circle/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="153" lean-forward="true" selection-start-line="153" selection-end-line="153" />
+        <state relative-caret-position="97">
+          <caret line="51" column="4" selection-start-line="51" selection-start-column="4" selection-end-line="51" selection-end-column="4" />
         </state>
       </provider>
     </entry>
