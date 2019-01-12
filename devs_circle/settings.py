@@ -147,4 +147,7 @@ EMAIL_HOST_PASS = os.environ.get('EMAIL_PASS')
 """
 
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)
 
