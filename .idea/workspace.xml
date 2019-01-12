@@ -3,27 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="12c0017b-e62d-4586-a5ef-f66fdf111831" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/devenv/lib/python3.6/site-packages/whitenoise-4.1.2.dist-info/INSTALLER" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/devenv/lib/python3.6/site-packages/whitenoise-4.1.2.dist-info/METADATA" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/devenv/lib/python3.6/site-packages/whitenoise-4.1.2.dist-info/RECORD" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/devenv/lib/python3.6/site-packages/whitenoise-4.1.2.dist-info/WHEEL" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/devenv/lib/python3.6/site-packages/whitenoise-4.1.2.dist-info/top_level.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/devenv/lib/python3.6/site-packages/whitenoise/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/devenv/lib/python3.6/site-packages/whitenoise/base.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/devenv/lib/python3.6/site-packages/whitenoise/compress.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/devenv/lib/python3.6/site-packages/whitenoise/django.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/devenv/lib/python3.6/site-packages/whitenoise/httpstatus_backport.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/devenv/lib/python3.6/site-packages/whitenoise/media_types.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/devenv/lib/python3.6/site-packages/whitenoise/middleware.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/devenv/lib/python3.6/site-packages/whitenoise/responders.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/devenv/lib/python3.6/site-packages/whitenoise/runserver_nostatic/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/devenv/lib/python3.6/site-packages/whitenoise/runserver_nostatic/management/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/devenv/lib/python3.6/site-packages/whitenoise/runserver_nostatic/management/commands/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/devenv/lib/python3.6/site-packages/whitenoise/runserver_nostatic/management/commands/runserver.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/devenv/lib/python3.6/site-packages/whitenoise/scantree.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/devenv/lib/python3.6/site-packages/whitenoise/storage.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/devenv/lib/python3.6/site-packages/whitenoise/string_utils.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/devs_circle/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/devs_circle/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Procfile" beforeDir="false" afterPath="$PROJECT_DIR$/Procfile" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -57,11 +37,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Procfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="19">
-              <caret line="1" selection-start-line="1" selection-end-line="1" />
+            <state>
+              <caret column="25" selection-start-column="25" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -78,8 +58,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/requirements.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="5" selection-start-line="5" selection-end-line="5" />
+            <state relative-caret-position="114">
+              <caret line="6" selection-start-line="6" selection-end-line="6" />
             </state>
           </provider>
         </entry>
@@ -87,20 +67,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/devs_circle/wsgi.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="17" column="14" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
+            <state relative-caret-position="171">
+              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
               <folding>
                 <element signature="e#227#236#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/devs_circle/settings.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="97">
-              <caret line="51" column="4" selection-start-line="51" selection-start-column="4" selection-end-line="51" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -210,9 +181,10 @@
         <option value="$PROJECT_DIR$/quiz/templates/quiz/index.html" />
         <option value="$PROJECT_DIR$/devs_circle/wsgi.py" />
         <option value="$PROJECT_DIR$/devs_circle/runtime" />
-        <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/devs_circle/Procfile" />
         <option value="$PROJECT_DIR$/devs_circle/settings.py" />
+        <option value="$PROJECT_DIR$/requirements.txt" />
+        <option value="$PROJECT_DIR$/Procfile" />
       </list>
     </option>
   </component>
@@ -349,12 +321,12 @@
       <workItem from="1547191913712" duration="1902000" />
       <workItem from="1547207344151" duration="620000" />
       <workItem from="1547222480754" duration="15338000" />
-      <workItem from="1547283180514" duration="4936000" />
+      <workItem from="1547283180514" duration="5866000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="68496000" />
+    <option name="totallyTimeSpent" value="69426000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="28" width="1366" height="740" extended-state="6" />
@@ -637,16 +609,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/devs_circle/wsgi.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="17" column="14" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
-          <folding>
-            <element signature="e#227#236#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/quiz/templates/quiz/question_detail.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="399">
@@ -674,13 +636,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Procfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/devs_circle/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="36">
@@ -691,17 +646,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/requirements.txt">
+    <entry file="file://$PROJECT_DIR$/devs_circle/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        <state relative-caret-position="969">
+          <caret line="51" column="4" selection-start-line="51" selection-start-column="4" selection-end-line="51" selection-end-column="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/devs_circle/settings.py">
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="97">
-          <caret line="51" column="4" selection-start-line="51" selection-start-column="4" selection-end-line="51" selection-end-column="4" />
+        <state relative-caret-position="114">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/devs_circle/wsgi.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+          <folding>
+            <element signature="e#227#236#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Procfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="25" selection-start-column="25" selection-end-column="25" />
         </state>
       </provider>
     </entry>
