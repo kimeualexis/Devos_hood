@@ -1,23 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="12c0017b-e62d-4586-a5ef-f66fdf111831" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/devenv/lib/python3.6/site-packages/whitenoise-4.0.dist-info/INSTALLER" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/devenv/lib/python3.6/site-packages/whitenoise-4.0.dist-info/METADATA" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/devenv/lib/python3.6/site-packages/whitenoise-4.0.dist-info/RECORD" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/devenv/lib/python3.6/site-packages/whitenoise-4.0.dist-info/WHEEL" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/devenv/lib/python3.6/site-packages/whitenoise-4.0.dist-info/top_level.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/devenv/lib/python3.6/site-packages/whitenoise/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/devenv/lib/python3.6/site-packages/whitenoise/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/devenv/lib/python3.6/site-packages/whitenoise/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/devenv/lib/python3.6/site-packages/whitenoise/base.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/devenv/lib/python3.6/site-packages/whitenoise/media_types.py" beforeDir="false" afterPath="$PROJECT_DIR$/devenv/lib/python3.6/site-packages/whitenoise/media_types.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/devenv/lib/python3.6/site-packages/whitenoise/middleware.py" beforeDir="false" afterPath="$PROJECT_DIR$/devenv/lib/python3.6/site-packages/whitenoise/middleware.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/devenv/lib/python3.6/site-packages/whitenoise/responders.py" beforeDir="false" afterPath="$PROJECT_DIR$/devenv/lib/python3.6/site-packages/whitenoise/responders.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/devenv/lib/python3.6/site-packages/whitenoise/storage.py" beforeDir="false" afterPath="$PROJECT_DIR$/devenv/lib/python3.6/site-packages/whitenoise/storage.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/devenv/lib/python3.6/site-packages/whitenoise/string_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/devenv/lib/python3.6/site-packages/whitenoise/string_utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/devs_circle/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/devs_circle/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-    </list>
+    <list default="true" id="12c0017b-e62d-4586-a5ef-f66fdf111831" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,11 +52,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/requirements.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="97">
-              <caret line="6" selection-start-line="6" selection-end-line="6" />
+            <state relative-caret-position="133">
+              <caret line="7" selection-start-line="7" selection-end-line="7" />
             </state>
           </provider>
         </entry>
@@ -101,11 +85,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/devs_circle/settings.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="133">
-              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+              <caret line="16" selection-start-line="16" selection-end-line="16" />
               <folding>
                 <element signature="e#312#321#0" expanded="true" />
               </folding>
@@ -208,8 +192,8 @@
         <option value="$PROJECT_DIR$/devs_circle/runtime" />
         <option value="$PROJECT_DIR$/devs_circle/Procfile" />
         <option value="$PROJECT_DIR$/Procfile" />
-        <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/devs_circle/settings.py" />
+        <option value="$PROJECT_DIR$/requirements.txt" />
       </list>
     </option>
   </component>
@@ -346,16 +330,15 @@
       <workItem from="1547191913712" duration="1902000" />
       <workItem from="1547207344151" duration="620000" />
       <workItem from="1547222480754" duration="15338000" />
-      <workItem from="1547283180514" duration="6667000" />
+      <workItem from="1547283180514" duration="6910000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="70227000" />
+    <option name="totallyTimeSpent" value="70470000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="28" width="1366" height="740" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.11170213" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -689,20 +672,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/requirements.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="97">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/devs_circle/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
           <folding>
             <element signature="e#312#321#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
         </state>
       </provider>
     </entry>
