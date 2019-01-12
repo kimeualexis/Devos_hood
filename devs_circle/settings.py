@@ -84,10 +84,10 @@ WSGI_APPLICATION = 'devs_circle.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'devs_circle',
-        'USER': 'root',
-        'PASSWORD': 'sodapop254kim!',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'demodb',
+        'USER': 'user_demo',
+        'PASSWORD': 'sodapop254kim',
         'HOST': '127.0.0.1',
         'PORT': '',
     }
