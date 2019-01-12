@@ -1,1 +1,1 @@
-web: gunicorn devs_circle.wsgi --log-file -
+web: gunicorn devs_circle:devs_circle
