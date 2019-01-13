@@ -25,6 +25,6 @@ urlpatterns = [
 
    # path('create_new/', views.create_quiz, name='question-create'),
    # path('(?P<quiz_id>[0-9]+)/', views.detail, name='question-detail'),
-    path('(?P<quiz_id>[0-9]+)/comment/', views.detail, name='question-comment'),
+   # path('(?P<quiz_id>[0-9]+)/comment/', views.detail, name='question-comment'),
    # path('(?P<quiz_id>[0-9]+)/delete/', views.delete, name='question-delete'),
 ]
