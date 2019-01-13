@@ -4,6 +4,7 @@
 
 {% block body %}
 {% if questions %}
+    <div class="col-sm-8 content-section">
     <div class="alert alert-info"><h5 class="text text-center">Questions:</h5></div>
     {% for quiz in questions %}
         <article class="media content-section">
@@ -47,6 +48,7 @@
     {% else %}
  <div class="alert alert-info"><h4 class="text text-center">No Questions:</h4></div>
 {% endif %}
+</div>
 
 {% endblock %}
 

@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404, redirect
+from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from django.contrib.auth.models import User
@@ -43,6 +43,9 @@ class QuestionCreateView(LoginRequiredMixin, CreateView):
     def form_valid(self, form):
         form.instance.author = self.request.user
         return super().form_valid(form)
+
+    def get_absolute_url(self):
+        return reverse('quiz:question-detail', kwargs={'pk': self.pk})
 
 
 class QuestionUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
@@ -97,7 +100,7 @@ def detail(request, quiz_id):
     return render(request, 'quiz/question_detail.html', {'quiz': quiz})
     """
 
-
+"""
 def create_quiz(request):
     form = QuestionForm(request.POST or None, request.FILES or None)
     if form.is_valid():
@@ -106,6 +109,7 @@ def create_quiz(request):
         question.image = request.FILES['image']
         question.save()
     return render(request, 'quiz/question_form.html', {'form': form})
+    
 
 
 def detail(request, quiz_id):
@@ -126,6 +130,8 @@ def delete(request, quiz_id):
     quiz = get_object_or_404(Question, pk=quiz_id)
     quiz.delete()
     return redirect('quiz:quiz-index')
+    
+    """
 
 
 class CommentUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
