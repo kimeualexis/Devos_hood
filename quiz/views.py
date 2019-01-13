@@ -4,6 +4,7 @@ from django.views.generic import ListView, DetailView, CreateView, UpdateView, D
 from django.contrib.auth.models import User
 from .models import Question, Comment, Quote
 from .forms import CommentForm, QuestionForm
+from django.views import View
 
 
 class QuoteListView(ListView):
@@ -66,7 +67,7 @@ class QuestionUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
 
 class QuestionDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     model = Question
-    success_url = '/'
+    success_url = '/home'
 
     def test_func(self):
         post = self.get_object()
@@ -85,14 +86,28 @@ class CommentListView(ListView):
 
 class CommentCreateView(CreateView):
     model = Comment
-    fields = ['comment', 'image']
-    template_name = 'quiz/question_detail.html'
+    fields = ['comment']
+
+    def get_success_url(self):
+        return reverse('quiz:question-detail', kwargs={'pk': self.get_object(Question.objects.all()).pk})
+
+        pass
 
     def form_valid(self, form, **kwargs):
         question = get_object_or_404(Question, pk=self.kwargs.get('pk'))
         form.instance.author = self.request.user
         form.instance.question = question
         return super(CommentCreateView, self).form_valid(form)
+
+
+class QuestionCommentView(View):
+    def get(self, request, *args, **kwargs):
+        view = QuestionDetailView.as_view()
+        return view(request, *args, **kwargs)
+
+    def get(self, request, *args, **kwargs):
+        view = CommentCreateView.as_view()
+        return view(request, *args, **kwargs)
 
 """
 def detail(request, quiz_id):

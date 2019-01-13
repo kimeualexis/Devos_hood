@@ -2,7 +2,7 @@ from django.urls import path
 from . import views
 from .views import (QuestionCreateView, QuestionDetailView,
                     QuestionListView, QuestionUpdateView,
-                    QuestionDeleteView, CommentCreateView,
+                    QuestionDeleteView, CommentCreateView, QuestionCommentView,
                     CommentUpdateView, CommentDeleteView, UserQuestionListView,
                     QuoteListView)
 
@@ -21,6 +21,7 @@ urlpatterns = [
    # path('<int:pk>/delete/', CommentDeleteView.as_view(), name='comment-delete'),
     path('<int:pk>/delete/', QuestionDeleteView.as_view(), name='question-delete'),
     path('about/', views.about, name='devox-about'),
+    path('<int:pk>/comment/', QuestionCommentView.as_view(), name='question-comment'),
 
 
    # path('create_new/', views.create_quiz, name='question-create'),

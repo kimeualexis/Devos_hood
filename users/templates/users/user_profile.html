@@ -5,26 +5,17 @@
 {% block body %}
 
 <div class="content-section">
-  <div class="media position-fixed">
+  <div class="media">
     <img class="rounded-circle account-img" src="{{ prof.image.url }}">
   </div>
 
 <div class="row">
 <div class="col-sm-3">
-    <br><br><br><br><br><br>
-    <div class="position-fixed">
-        <br>
-    <table class="table">
-        <tr><td><a href="{% url 'user-profile' %}"> {{ user.username }}</a></td></tr>
-        <tr><td>{{ user.email }}</td></tr>
-        <tr><td>{{ prof.bio }}</td></tr>
-        <tr><td>
-        <a class="btn btn-secondary btn-sn mt-1" href="{% url 'update-profile' %}">Update</a>
-    </td></tr>
-    </table>
-    </div>
-
-</div>
+    <p><a href="{% url 'user-profile' %}"> {{ user.username }}</a></p>
+        <p>{{ user.email }}</p>
+        <p>{{ prof.bio }}</p>
+        <p><a class="btn btn-secondary btn-sn mt-1" href="{% url 'update-profile' %}">Update</a></p>
+  </div>
 
 
    {% if questions %}
