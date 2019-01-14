@@ -5,12 +5,11 @@
 {% block body %}
 
 <div class="content-section">
-  <div class="media">
-    <img class="rounded-circle account-img" src="{{ prof.image.url }}">
-  </div>
-
 <div class="row">
 <div class="col-sm-3">
+    <div class="media">
+    <img class="rounded-circle account-img" src="{{ prof.image.url }}">
+  </div>
     <p><a href="{% url 'user-profile' %}"> {{ user.username }}</a></p>
         <p>{{ user.email }}</p>
         <p>{{ prof.bio }}</p>
@@ -18,10 +17,10 @@
   </div>
 
 
-   {% if questions %}
        <div class="col-sm-9">
+       {% if questions %}
            <div class="alert alert-info"><h4 class="text text-center">My Questions:</h4></div>
-    {% for quiz in questions %}
+            {% for quiz in questions %}
     <h2><a class="article-title" href="{% url 'quiz:question-detail' quiz.id %}">{{ quiz.pk }}. {{ quiz.title }}</a></h2>
         {% if quiz.image %}
 
@@ -32,10 +31,13 @@
 
         <hr>
        {% endfor %}
-       </div>
+
        {% else %}
-       <div class="alert alert-info"><h4 class="text text-center">No Questions</h4></div>
- {% endif %}
+        <div class="alert alert-info"><h4 class="text text-center">No Questions</h4></div>
+       </div>
+        {% endif %}
+
+
 </div>
 </div>
 {% endblock %}

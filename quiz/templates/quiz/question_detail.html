@@ -1,40 +1,36 @@
 {% extends 'quiz/base.html' %}
 {% load crispy_forms_tags %}
 
-{% block title %}<title>Question: {{ object.pk }}</title>{% endblock %}
+{% block title %}<title>Question: {{ quiz.pk }}</title>{% endblock %}
 
 {% block body %}
     <div class="col-sm-6 content-section">
         <article class="">
-        <img class="rounded-circle article-img" style="margin: 2px;" src="{{ object.author.profile.image.url }}">
+        <img class="rounded-circle article-img" style="margin: 2px;" src="{{ quiz.author.profile.image.url }}">
           <div class="media-body">
             <div class="article-metadata">
-              <a class="" style="margin: 2px;" href="{% url 'user-profile' %}">{{ object.author }}</a>
-              <small class="text-muted">{{ object.created|date:"F d, Y" }}</small>
-                {% if object.author == user %}
+              <a class="" style="margin: 2px;" href="{% url 'user-profile' %}">{{ quiz.author }}</a>
+              <small class="text-muted">{{ quiz.created|date:"F d, Y" }}</small>
+                {% if quiz.author == user %}
                     <div class="">
-                    <a class="btn btn-secondary btn-sn mt-1 mb-1" style="margin: 2px;" href="{% url 'quiz:question-update' object.id %}">Update</a>
-                    <a class="btn btn-danger btn-sn mt-1 mb-1" style="margin: 2px;" href="{% url 'quiz:question-delete' object.id %}">Delete</a>
+                    <a class="btn btn-secondary btn-sn mt-1 mb-1" style="margin: 2px;" href="{% url 'quiz:question-update' pk=quiz.pk %}">Update</a>
+                    <a class="btn btn-danger btn-sn mt-1 mb-1" style="margin: 2px;" href="{% url 'quiz:question-delete' quiz.id %}">Delete</a>
                     </div>
                 {% endif %}
             </div>
 
-            <h5 class="article-title" style="margin: 2px;">{{ object.title }}</h5>
-            <p class="article-content" style="margin: 2px;">{{ object.content }}</p>
+            <h5 class="article-title" style="margin: 2px;">{{ quiz.title }}</h5>
+            <p class="article-content" style="margin: 2px;">{{ quiz.content }}</p>
 
-          {% if object.comment_set %}
+          {% if quiz.comment_set %}
               <div class="article-metadata">
               <br>
-              <h5 class="text-primary text-outline-info" style="margin: 2px;">Comments: {{ object.comment_set.count }}</h5>
+              <h5 class="text-primary text-outline-info" style="margin: 2px;">Comments: {{ quiz.comment_set.count }}</h5>
           </div>
-              {% for i in object.comment_set.all %}
+              {% for i in quiz.comment_set.all %}
 
-                  <p style="margin: 2px;">{{ i.comment }} - <a class="mr-2" href="{% url 'user-profile' %}">{{ i.author }}</a></p>
+                  <p style="margin: 2px;">{{ i.comment }} - <a class="mr-2" href="{% url 'user-profile' %}">{{ i.author }} - {{ i.created|date:"F d, Y" }}</a></p>
 
-
-                  {% if i.image %}
-                  <img class="img img-thumbnail" style="height: 500px; width: 750px ;" src="{{ i.image.url }}">
-                  {% endif %}
 
 
                   <hr>
@@ -47,7 +43,7 @@
 
     <!-- Trial: Stack Overflow-->
           <br><br>
-    <form method="POST" action="" enctype="multipart/form-data">
+    <form method="POST" action="{% url 'quiz:question-detail' quiz.id %}" enctype="multipart/form-data">
     {% csrf_token %}
     <fieldset class="form-group">
         <legend class="border-bottom mb-4"><b>Your Comment</b></legend>

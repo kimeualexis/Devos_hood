@@ -1,17 +1,9 @@
-from django.shortcuts import render, get_object_or_404, redirect, reverse
+from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from django.contrib.auth.models import User
-from .models import Question, Comment, Quote
+from .models import Question, Comment
 from .forms import CommentForm, QuestionForm
-from django.views import View
-
-
-class QuoteListView(ListView):
-    model = Quote
-    template_name = 'quiz/home.html'
-    context_object_name = 'quotes'
-    ordering = ['-author']
 
 
 class QuestionListView(LoginRequiredMixin, ListView):
@@ -44,9 +36,6 @@ class QuestionCreateView(LoginRequiredMixin, CreateView):
     def form_valid(self, form):
         form.instance.author = self.request.user
         return super().form_valid(form)
-
-    def get_absolute_url(self):
-        return reverse('quiz:question-detail', kwargs={'pk': self.pk})
 
 
 class QuestionUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
@@ -81,7 +70,6 @@ class CommentListView(ListView):
     model = Comment
     context_object_name = 'comments'
     template_name = ''
-    """
 
 
 class CommentCreateView(CreateView):
@@ -100,22 +88,11 @@ class CommentCreateView(CreateView):
         return super(CommentCreateView, self).form_valid(form)
 
 
-class QuestionCommentView(View):
-    def get(self, request, *args, **kwargs):
-        view = QuestionDetailView.as_view()
-        return view(request, *args, **kwargs)
-
-    def get(self, request, *args, **kwargs):
-        view = CommentCreateView.as_view()
-        return view(request, *args, **kwargs)
-
-"""
 def detail(request, quiz_id):
     quiz = get_object_or_404(Question, pk=quiz_id)
     return render(request, 'quiz/question_detail.html', {'quiz': quiz})
-    """
-
-"""
+  
+  
 def create_quiz(request):
     form = QuestionForm(request.POST or None, request.FILES or None)
     if form.is_valid():
@@ -125,6 +102,7 @@ def create_quiz(request):
         question.save()
     return render(request, 'quiz/question_form.html', {'form': form})
     
+"""
 
 
 def detail(request, quiz_id):
@@ -136,17 +114,14 @@ def detail(request, quiz_id):
         # comm.image = request.FILES['image']
         comm.question = quiz
         comm.save()
-    context = {'quiz': quiz,
-               'form': form}
-    return render(request, 'quiz/question_detail.html', context)
+    form = CommentForm()
+    return render(request, 'quiz/question_detail.html', {'form': form, 'quiz': quiz})
 
 
 def delete(request, quiz_id):
     quiz = get_object_or_404(Question, pk=quiz_id)
     quiz.delete()
     return redirect('quiz:quiz-index')
-    
-    """
 
 
 class CommentUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
@@ -177,3 +152,12 @@ class CommentDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
 
 def about(request):
     return render(request, 'quiz/about.html')
+
+
+"""
+def delete_comment(request, quiz_id, comment_id):
+    quiz = get_object_or_404(Question, pk=quiz_id)
+    comment = Comment.objects.get(pk=comment_id)
+    comment.delete()
+    return render(request, 'quiz/question_detail.html', {'quiz': quiz})
+    """

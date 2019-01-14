@@ -16,7 +16,7 @@ class Question(models.Model):
         return self.title
 
     def get_absolute_url(self):
-        return reverse('quiz:question-detail', kwargs={'pk': self.pk})
+        return reverse('quiz:question-detail', args=[str(self.pk)])
 
 
 class Comment(models.Model):
@@ -24,17 +24,9 @@ class Comment(models.Model):
     # image = models.ImageField(blank=True)
     author = models.ForeignKey(User, on_delete=models.CASCADE)
     question = models.ForeignKey(Question, on_delete=models.CASCADE)
+    created = models.DateTimeField(default=timezone.now)
 
     def __str__(self):
         return self.comment
 
-    def get_absolute_url(self):
-        return reverse('quiz:question-detail', kwargs={'pk': self.question.pk})
 
-
-class Quote(models.Model):
-    author = models.CharField(max_length=30)
-    content = models.TextField()
-
-    def __str__(self):
-        return self.author
