@@ -18,7 +18,7 @@ class UserQuestionListView(ListView):
     model = Question
     template_name = 'quiz/user_questions.html'
     context_object_name = 'questions'
-    paginate_by = 2
+    paginate_by = 7
 
     def get_queryset(self):
         user = get_object_or_404(User, username=self.kwargs.get('username'))
