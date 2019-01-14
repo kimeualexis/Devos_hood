@@ -43,7 +43,7 @@
 
     <!-- Trial: Stack Overflow-->
           <br><br>
-    <form method="POST" action="" enctype="multipart/form-data">
+    <form method="POST" action="{% url 'quiz:question-detail' quiz.id %}" enctype="multipart/form-data">
     {% csrf_token %}
     <fieldset class="form-group">
         <legend class="border-bottom mb-4"><b>Your Comment</b></legend>
