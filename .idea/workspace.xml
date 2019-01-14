@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="12c0017b-e62d-4586-a5ef-f66fdf111831" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/quiz/templates/quiz/question_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/quiz/templates/quiz/question_detail.html" afterDir="false" />
-    </list>
+    <list default="true" id="12c0017b-e62d-4586-a5ef-f66fdf111831" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,7 +33,7 @@
         <entry file="file://$PROJECT_DIR$/quiz/templates/quiz/question_detail.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="81">
-              <caret line="45" column="32" selection-start-line="45" selection-start-column="32" selection-end-line="45" selection-end-column="32" />
+              <caret line="45" column="32" lean-forward="true" selection-start-line="45" selection-start-column="32" selection-end-line="45" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -424,12 +421,12 @@
       <workItem from="1547405648742" duration="4920000" />
       <workItem from="1547458065911" duration="4503000" />
       <workItem from="1547463030599" duration="3174000" />
-      <workItem from="1547479809233" duration="13333000" />
+      <workItem from="1547479809233" duration="13676000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="109784000" />
+    <option name="totallyTimeSpent" value="110127000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="28" width="1366" height="740" extended-state="6" />
@@ -783,7 +780,7 @@
     <entry file="file://$PROJECT_DIR$/quiz/templates/quiz/question_detail.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="81">
-          <caret line="45" column="32" selection-start-line="45" selection-start-column="32" selection-end-line="45" selection-end-column="32" />
+          <caret line="45" column="32" lean-forward="true" selection-start-line="45" selection-start-column="32" selection-end-line="45" selection-end-column="32" />
         </state>
       </provider>
     </entry>
