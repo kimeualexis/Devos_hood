@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="12c0017b-e62d-4586-a5ef-f66fdf111831" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quiz/templates/quiz/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/quiz/templates/quiz/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -55,11 +55,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/quiz/templates/quiz/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="81">
-              <caret line="23" column="16" lean-forward="true" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="16" />
-              <folding>
-                <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#article#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="201">
+              <caret line="20" column="80" selection-start-line="20" selection-start-column="80" selection-end-line="20" selection-end-column="80" />
             </state>
           </provider>
         </entry>
@@ -148,7 +145,6 @@
         <option value="$PROJECT_DIR$/Procfile" />
         <option value="$PROJECT_DIR$/devs_circle/settings.py" />
         <option value="$PROJECT_DIR$/requirements.txt" />
-        <option value="$PROJECT_DIR$/quiz/templates/quiz/index.html" />
         <option value="$PROJECT_DIR$/quiz/main.py" />
         <option value="$PROJECT_DIR$/quiz/admin.py" />
         <option value="$PROJECT_DIR$/quiz/urls.py" />
@@ -159,6 +155,7 @@
         <option value="$PROJECT_DIR$/quiz/templates/quiz/question_detail.html" />
         <option value="$PROJECT_DIR$/quiz/views.py" />
         <option value="$PROJECT_DIR$/quiz/models.py" />
+        <option value="$PROJECT_DIR$/quiz/templates/quiz/index.html" />
       </list>
     </option>
   </component>
@@ -386,15 +383,16 @@
       <workItem from="1547545041621" duration="2231000" />
       <workItem from="1547571587320" duration="7207000" />
       <workItem from="1547616593136" duration="164000" />
-      <workItem from="1547627691248" duration="443000" />
+      <workItem from="1547627691248" duration="743000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="121326000" />
+    <option name="totallyTimeSpent" value="121626000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="28" width="1366" height="740" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12765957" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -410,7 +408,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.3294893" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.5041186" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.5041186" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -738,11 +736,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/quiz/templates/quiz/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="23" column="16" lean-forward="true" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="16" />
-          <folding>
-            <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#article#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="201">
+          <caret line="20" column="80" selection-start-line="20" selection-start-column="80" selection-end-line="20" selection-end-column="80" />
         </state>
       </provider>
     </entry>
